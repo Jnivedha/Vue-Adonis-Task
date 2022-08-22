@@ -20,7 +20,7 @@
                             </select>
                         </div>
                         <br>
-                        <button class="btn btn-info add-new"><i class="fa fa-plus"></i> <router-link to="/addDept">  Add New !! </router-link></button>
+                        <button class="btn btn-info add-new"><i class="fa fa-plus"></i> <router-link class="add" to="/addDept">  Add New !! </router-link></button>
                     </div>
                 </div>
             </div>
@@ -391,6 +391,12 @@ select{
     min-width: 100px;
     border-radius: 50px;
     line-height: 13px;
+}
+.add{
+    color: white;
+}
+.add:hover{
+    color: white
 } 
 
 .btn2 {

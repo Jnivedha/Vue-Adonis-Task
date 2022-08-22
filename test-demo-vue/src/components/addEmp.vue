@@ -82,7 +82,6 @@ methods:{
 
     async insertData()
     {
-        //const allDetails = await this.instance.get('/selectallEmp', this.config)
         const dobdate = this.dob;
         const dojdate = this.doj;
         const formatdob = dateformat(dobdate , "yyyy-mm-dd")

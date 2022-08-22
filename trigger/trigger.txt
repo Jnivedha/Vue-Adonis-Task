@@ -1,0 +1,33 @@
+// Function for Trigger
+create or replace function audit_action() 
+returns trigger as $audit$
+
+begin
+if (TG_OP = 'DELETE') THEN
+insert into logs VALUES('Deletion on Departments', now());
+
+elsif (TG_OP = 'UPDATE') THEN
+insert into logs VALUES('Update on Departments', now());
+
+elsif (TG_OP = 'INSERT') THEN
+insert into logs VALUES('New Insert on Departments', now());
+
+end if;
+return null;
+                
+end;
+$audit$
+language plpgsql;
+
+// Trigger for depts
+create trigger audit_trigger
+after insert or update or delete on depts
+for each row 
+execute procedure audit_action();
+
+// Trigger for emps
+create trigger audit_trigger
+after insert or update or delete on emps
+for each row 
+execute procedure audit_action();
+ 

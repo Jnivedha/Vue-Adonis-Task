@@ -6,7 +6,7 @@ export default class DeptTablessController {
     // Insert to the database
     public async insertDept ({request})
     {  
-       await request.validate(DeptValidator)
+      await request.validate(DeptValidator)
       try {
             const newRow = new departments()
             //newRow.id = request.input('id')

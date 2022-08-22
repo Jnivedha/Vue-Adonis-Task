@@ -297,10 +297,10 @@ body {
     position: relative;        
     float: right;
 }
-.search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
+.search-box select {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 1px;
     border-color: #ddd;
     box-shadow: none;
 }
@@ -310,7 +310,7 @@ body {
 .search-box i {
     color: #a0a5b1;
     position: absolute;
-    font-size: 19px;
+    font-size: 15px;
     top: 8px;
     left: 10px;
 }

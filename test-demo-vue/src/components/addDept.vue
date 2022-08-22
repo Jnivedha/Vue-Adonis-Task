@@ -59,6 +59,7 @@ methods:{
         const deptDetails = { name: this.name}
         if( this.name !== "" )
             {
+                console.log(deptDetails)
                 await this.instance.post('/insertDept', deptDetails ,this.config)
                 alert("Data Inserted Successfully")
                 this.clearform()
